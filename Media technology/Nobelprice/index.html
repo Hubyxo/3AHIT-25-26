@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Nobel Prizes</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; background: #f0f0f0; }
+    input { padding: 8px; width: 100%; margin-bottom: 10px; }
+    ul { list-style: none; padding: 0; }
+    li { background: #fff; margin-bottom: 8px; padding: 10px; border-radius: 5px; }
+    strong { display: block; margin-bottom: 5px; }
+  </style>
+</head>
+<body>
+  <h1>Nobel Prizes</h1>
+  <input id="search" placeholder="Search...">
+  <ul id="list"></ul>
+
+  <script>
+    // all data
+    let dataList = [];
+
+    // load api
+    fetch('https://api.nobelprize.org/v1/prize.json')
+      .then(res => res.json())
+      .then(data => {
+        dataList = data.prizes;
+        show(dataList);
+      });
+
+    // show list
+    function show(list) {
+      let ul = document.getElementById('list');
+      ul.innerHTML = '';
+      for (let i = 0; i < list.length; i++) {
+        let prize = list[i];
+        let li = document.createElement('li');
+        let text = prize.year + ' - ' + prize.category;
+        li.innerHTML = '<strong>' + text + '</strong>';
+        if (prize.laureates) {
+          for (let j = 0; j < prize.laureates.length; j++) {
+            let l = prize.laureates[j];
+            li.innerHTML += (l.firstname || '') + ' ' + (l.surname || '') + '<br>';
+          }
+        }
+        ul.appendChild(li);
+      }
+    }
+
+    // search input
+    document.getElementById('search').addEventListener('input', function(e) {
+      let q = e.target.value.toLowerCase();
+      let filtered = [];
+      for (let i = 0; i < dataList.length; i++) {
+        let prize = dataList[i];
+        let text = prize.year + ' ' + prize.category;
+        if (text.toLowerCase().indexOf(q) !== -1) {
+          filtered.push(prize);
+        }
+      }
+      show(filtered);
+    });
+  </script>
+</body>
+</html>
