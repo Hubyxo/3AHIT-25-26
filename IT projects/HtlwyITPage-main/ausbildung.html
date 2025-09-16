@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>HTL Waidhofen — Abteilung Informationstechnologie</title>
+  <style>
+    /* Einfaches, klares Styling für Anfänger */
+    :root{--max:1000px;font-family:Inter,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
+    body{margin:0;color:#111;line-height:1.5;background:#f6f7fb}
+    .container{max-width:var(--max);margin:2px auto;padding:24px;}
+    header{background:#F59127;color:white;padding:28px 0;margin:2px;position:relative;}
+    header h1{margin:0;font-size:24px;}
+    nav{display:flex;gap:12px;flex-wrap:wrap;margin-top:10px}
+    nav a{color:white;text-decoration:none;font-weight:600}
+    .hero{background:white;padding:28px;border-radius:12px;margin:2px;box-shadow:0 6px 18px rgba(10,20,40,0.06)}
+    .grid{display:grid;grid-template-columns:1fr;gap:18px;margin:2px}
+    @media(min-width:800px){.grid{grid-template-columns:1fr 320px}}
+    .card{background:white;padding:18px;border-radius:10px;margin:2px;box-shadow:0 6px 18px rgba(10,20,40,0.04)}
+    h2{margin:0 0 10px 0}
+    ul{margin:0;padding-left:18px}
+    footer{margin-top:22px;padding:18px 0;color:#555;font-size:14px;margin:2px}
+    .btn{display:inline-block;padding:8px 12px;border-radius:8px;background:#0b5ed7;color:white;text-decoration:none;margin:2px}
+    .top-btn{position:absolute;top:10px;left:10px;padding:6px 10px;font-size:14px;border-radius:6px;background:#9E9891  ;color:white;text-decoration:none}
+    .logo{position:absolute;top:10px;right:10px;height:40px}
+  </style>
+</head>
+<body>
+  <header>
+    <a href="./index.html" class="top-btn">Startseite</a>
+    <img src="Images/HTLWY-Logo.png" alt="HTL Waidhofen Logo" class="logo">
+    <link rel="icon" type="image/png" href="Images/HTLWY-Logo.png">
+    <div class="container">
+      <h1>HTL Waidhofen — Abteilung Informationstechnologie</h1>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero card">
+      <h2>Willkommen in der digitalen Zukunft</h2>
+      <p>Die IT-Abteilung der HTL Waidhofen bereitet Jugendliche praxisnah auf Softwareentwicklung, Netzwerke, Datenbanken, Medientechnik und IT-Sicherheit vor. Schwerpunkt: reale Projekte, Industrieanbindung und moderne Technologien (Cloud, KI).</p>
+    </section>
+
+    <div class="grid">
+      <div>
+        <section id="about" class="card">
+          <h2>Ausbildung — Kurz und klar</h2>
+          <p>Fünfjährige Ausbildung mit Praxisprojekten und Reifeprüfung (Matura). Absolvent:innen können sofort arbeiten oder an Fachhochschule/Universität weiterstudieren. Nach Praxis besteht die Möglichkeit, den Ingenieur-Titel zu beantragen.</p>
+        </section>
+
+        <section id="focus" class="card">
+          <h2>Unterrichtsschwerpunkte</h2>
+          <ul>
+            <li>Softwareentwicklung (Desktop, Web, Mobile)</li>
+            <li>Betriebssysteme für Clients & Server</li>
+            <li>Datenbanksysteme und SQL</li>
+            <li>Netzwerk- und Systemtechnik (Labor)</li>
+            <li>Medientechnik: Foto, Video, Multimedia</li>
+            <li>IT-Sicherheit und Datenschutz</li>
+            <li>Cloud-Technologien & Künstliche Intelligenz</li>
+            <li>Projektmanagement & wirtschaftliche Grundlagen</li>
+          </ul>
+        </section>
+
+        <section id="curriculum" class="card">
+          <h2>Stundentafel & Abschluss</h2>
+          <p>Die Stundentafel gliedert sich in technische, theoretische und projektorientierte Fächer. Die Ausbildung endet mit Diplomarbeit und Matura.</p>
+          <p>Praktische Labore und Kooperationen mit regionalen Firmen sorgen für reale Erfahrung.</p>
+        </section>
+
+        <section id="career" class="card">
+          <h2>Berufliche Möglichkeiten</h2>
+          <p>Gute Jobaussichten in Österreich. Beispiele:</p>
+          <ul>
+            <li>Softwareentwickler/in (Frontend/Backend, Mobile)</li>
+            <li>System- und Netzwerkadministrator/in</li>
+            <li>IT-Projektleiter/in</li>
+            <li>Security/Datenschutz-Spezialist/in</li>
+            <li>Webdesigner/in und Full-Stack-Entwickler/in</li>
+            <li>KI-Entwickler/in / Data-Engineer</li>
+          </ul>
+        </section>
+      </div>
+
+      <aside>
+        <section class="card">
+          <h2>Schnellinfos</h2>
+          <p><strong>Dauer:</strong> 5 Jahre</p>
+          <p><strong>Abschluss:</strong> Diplom + Matura</p>
+          <p><strong>Voraussetzungen:</strong> Schulanmeldung & Aufnahmeverfahren (siehe Schule)</p>
+        </section>
+
+        <section class="card" id="contact">
+          <h2>Kontakt</h2>
+          <p>HTL Waidhofen an der Ybbs<br>Im Vogelsang 8<br>3340 Waidhofen an der Ybbs</p>
+          <p>Telefon: 07442 / 52590-0<br>Email: office@htlwy.at</p>
+          <p><a class="btn" href="https://www.htlwy.at/ausbildung/informationstechnologie/" target="_blank" rel="noopener">Originalseite</a></p>
+        </section>
+
+        <section class="card">
+          <h2>Impressionen</h2>
+          <p>Labor, Serverraum, Medienstudio und Roboterprogrammierung sind Teil des Unterrichts.</p>
+        </section>
+      </aside>
+    </div>
+
+    <footer>
+      <div class="container">
+        <small>Diese Seite ist eine einfache Zusammenfassung der IT-Ausbildung an der HTL Waidhofen. Für aktuelle Details immer die Originalseite prüfen.</small>
+      </div>
+    </footer>
+  </main>
+</body>
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTLWY IT-Abteilung</title>
+    <link rel="icon" href="Images/Htlwy-Logo.png" type="image/png">
+    <style>
+        /* Global Styles */
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #fff;
+            color: #333;
+        }
+
+        /* Header */
+        header {
+            background-color: #F59127;
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+            border-bottom-left-radius: 25px;
+            border-bottom-right-radius: 25px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+            header h1 {
+                margin: 0;
+                font-size: 2.5em;
+            }
+
+            header p {
+                margin-top: 5px;
+                font-size: 1.1em;
+            }
+
+        /* Navigation */
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 15px 0;
+            background-color: #fff;
+            border-bottom: 3px solid #F59127;
+        }
+
+            nav a {
+                text-decoration: none;
+                color: #F59127;
+                font-weight: bold;
+                padding: 10px 25px;
+                border-radius: 12px;
+                transition: all 0.3s ease;
+                box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            }
+
+                nav a:hover {
+                    background-color: #F59127;
+                    color: white;
+                    transform: translateY(-2px);
+                }
+
+        /* Main Section */
+        main {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        .card {
+            background-color: #fff8f0;
+            border: 2px solid #F59127;
+            border-radius: 20px;
+            padding: 25px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+            .card:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+            }
+
+            .card h3 {
+                color: #F59127;
+                margin-top: 0;
+            }
+
+            .card ul {
+                padding-left: 20px;
+            }
+
+        /* Footer */
+        footer {
+            background-color: #F59127;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            border-top-left-radius: 25px;
+            border-top-right-radius: 25px;
+            margin-top: 50px;
+            box-shadow: 0 -4px 8px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>HTLWY IT-Abteilung</h1>
+        <p>Willkommen auf der offiziellen Seite unserer IT-Abteilung!</p>
+    </header>
+
+    <nav>
+        <a href="about.html">über uns</a>
+        <a href="timeTable.html">Stundenplan</a>
+        <a href="ausbildung.html">Bildungsdetails</a>
+    </nav>
+
+    <main>
+        <div class="card">
+            <h3>Unsere Mission</h3>
+            <p>Unsere IT-Abteilung vermittelt den Schülern praxisnahe Fähigkeiten in Programmierung, Netzwerken und Hardware. Innovation und praktische Erfahrung stehen bei uns im Mittelpunkt.</p>
+        </div>
+
+        <div class="card">
+            <h3>Aktuelle Projekte</h3>
+            <ul>
+                <li>Webseiten für lokale Unternehmen entwickeln</li>
+                <li>IoT-Klassenzimmer-Temperaturüberwachung</li>
+                <li>Spieleentwicklung mit C# und Unity</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h3>Schülerleben</h3>
+            <p>Unsere Schüler organisieren Workshops, Hackathons und Lerngruppen. Wir fördern Teamarbeit, Coding-Wettbewerbe und Tech-Clubs, um Wissen praxisnah zu vertiefen.</p>
+        </div>
+    </main>
+
+    <footer>
+        &copy; 2025 HTLWY IT-Abteilung
+    </footer>
+
+</body>
+</html>
