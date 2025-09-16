@@ -1,28 +1,29 @@
-# 📂 Software Development Projects 2025/26
+# 📂 Coding Projects – School Year 2025/26
 
 Welcome to this repository! 🚀  
 
-This is where I upload **all my projects from the subject _Software Development_**.  
-The projects are **available to everyone** – for learning, use, or inspiration.  
+Here I upload **all my coding projects** from the subjects  
+**IT Projects**, **Software Development**, and **Media Technology**.  
+All projects are freely available – to learn from, use, or take inspiration.  
 
 ---
 
 ## 📌 Contents
-- 🖥️ School projects in the field of **software development**
-- 📚 Sample programs & exercises
-- 🔧 Practical applications and experiments
+- 🖥️ School projects from **IT Projects**, **Software Development**, and **Media Technology**  
+- 📚 Example programs & exercises  
+- 🔧 Practical applications and experiments  
 
 ---
 
-## 🤝 Use
-- The code may be used freely.  
-- Feedback, suggestions for improvement, or pull requests are welcome!  
+## 🤝 Usage
+- The code can be used freely.  
+- Feedback, suggestions, or pull requests are very welcome!  
 
 ---
 
 ## 📬 Contact
-If you have any questions or would like to know more about a project,  
-please feel free to contact me.  
+If you have questions or want to know more about a project,  
+feel free to reach out.  
 
 ---
-✨ Have fun browsing and trying things out!
+✨ Have fun exploring and experimenting!
