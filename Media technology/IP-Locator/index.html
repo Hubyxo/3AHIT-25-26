@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>IP-Locator (Simple)</title>
+  <style>
+    body { font-family: Arial, sans-serif; background:#f0f0f0; padding:20px; }
+    .box { background:white; padding:20px; border-radius:8px; max-width:600px; margin:auto; }
+    input, button { padding:8px; font-size:16px; }
+    input { width:70%; }
+    button { background:#4da3ff; border:none; color:white; cursor:pointer; }
+    .result { margin-top:15px; padding:10px; background:#f9f9f9; border:1px solid #ccc; border-radius:6px; }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <h1>IP-Locator</h1>
+    <p>Enter a domain (e.g. <code>www.orf.at</code>):</p>
+
+    <input type="text" id="domain" value="">
+    <button id="btn">Search</button>
+
+    <div id="result" class="result">Result appears here.</div>
+  </div>
+
+  <script>
+    // get elements
+    let field = document.getElementById("domain");
+    let button = document.getElementById("btn");
+    let output = document.getElementById("result");
+
+    // on click
+    button.onclick = function() {
+      let domain = field.value;
+
+      // create xhr
+      let xhr = new XMLHttpRequest();
+
+      // handle response
+      xhr.onreadystatechange = function() {
+        if (xhr.readyState == 4) {
+          // parse json
+          let data = JSON.parse(xhr.responseText);
+
+          // build result
+          let text = "";
+          text += "Status: " + data.status + "<br>";
+          if (data.message) {
+            text += "Message: " + data.message + "<br>";
+          }
+          text += "Country: " + data.countryCode + "<br>";
+          text += "ISP: " + data.isp + "<br>";
+          text += "Org: " + data.org + "<br>";
+          text += "Timezone: " + data.timezone + "<br>";
+          text += "Coords: " + data.lat + ", " + data.lon + "<br>";
+
+          // maps link
+          if (data.lat && data.lon) {
+            let link = "https://www.google.com/maps/search/?api=1&query=" + data.lat + "," + data.lon;
+            text += "<a href='" + link + "' target='_blank'>Open Google Maps</a>";
+          }
+
+          output.innerHTML = text;
+        }
+      };
+
+      // send request
+      let url = "http://ip-api.com/json/" + domain + "?fields=status,message,countryCode,isp,org,lat,lon,timezone";
+      xhr.open("GET", url, true);
+      xhr.send();
+    };
+  </script>
+</body>
+</html>
