@@ -16,7 +16,8 @@ namespace InterfaceDevice.Classes
         public Plotter(string name, string type, bool powerStatus)
         {
             Name = name;
-            Type = type ?? "Plotter";
+            Name = name;
+            Type = type;
             PowerStatus = powerStatus;
         }
 

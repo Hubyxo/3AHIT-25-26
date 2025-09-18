@@ -16,7 +16,8 @@ namespace InterfaceDevice.Classes
         public MultifunctionalDevice(string name, string type, bool powerStatus)
         {
             Name = name;
-            Type = type ?? "Multifunktionsgerät";
+            Name = name;
+            Type = type;
             PowerStatus = powerStatus;
         }
 

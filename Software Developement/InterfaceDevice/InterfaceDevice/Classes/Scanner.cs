@@ -17,7 +17,7 @@ namespace InterfaceDevice.Classes
         public Scanner(string name, string type, bool powerStatus)
         {
             Name = name;
-            Type = type ?? "Scanner";
+            Type = type;
             PowerStatus = powerStatus;
         }
 

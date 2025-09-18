@@ -18,7 +18,8 @@ namespace InterfaceDevice.Classes
         public Printer(string name, string type, bool powerStatus, bool tonerStatus)
         {
             Name = name;
-            Type = type ?? "Drucker";
+            Name = name;
+            Type = type;
             PowerStatus = powerStatus;
             TonerStatus = tonerStatus;
         }
