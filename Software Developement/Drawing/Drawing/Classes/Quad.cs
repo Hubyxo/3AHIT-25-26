@@ -16,5 +16,6 @@ namespace Drawing.Classes
             points.Add(new Point(x + side, y + side));
             points.Add(new Point(x, y + side));
         }
+
     }
 }
